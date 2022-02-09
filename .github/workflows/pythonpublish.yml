@@ -9,6 +9,7 @@ jobs:
   deploy-manylinux:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.7", "3.8", "3.9", "3.10"]
     steps:
@@ -39,6 +40,7 @@ jobs:
   deploy-macos:
     runs-on: macos-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.7", "3.8", "3.9", "3.10"]
     steps:
@@ -71,6 +73,7 @@ jobs:
   deploy-windows:
     runs-on: windows-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.7", "3.8", "3.9", "3.10"]
     steps:
